@@ -20,7 +20,7 @@ The server starts on `http://localhost:8080`.
 ### Create an account
 
 ```bash
-curl -X POST http://localhost:8080/api/accounts \
+curl -X POST http://localhost:8080/accounts \
   -H 'Content-Type: application/json' \
   -d '{"initialBalance": 1000.00}'
 ```
@@ -30,7 +30,7 @@ curl -X POST http://localhost:8080/api/accounts \
 Type might be DEPOSIT or WITHDRAWAL
 
 ```bash
-curl -X POST http://localhost:8080/api/accounts/alice/transactions \
+curl -X POST http://localhost:8080/api/accounts/1/movements \
   -H 'Content-Type: application/json' \
   -d '{"type": "DEPOSIT", "amount": 100.00}'
 ```
