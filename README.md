@@ -16,6 +16,7 @@ mvn spring-boot:run
 The server starts on `http://localhost:8080`.
 
 ## API Usage Examples
+We expect that accountId equals 1
 
 ### Create an account
 
@@ -30,7 +31,7 @@ curl -X POST http://localhost:8080/accounts \
 Type might be DEPOSIT or WITHDRAWAL
 
 ```bash
-curl -X POST http://localhost:8080/api/accounts/1/movements \
+curl -X POST http://localhost:8080/accounts/1/movements \
   -H 'Content-Type: application/json' \
   -d '{"type": "DEPOSIT", "amount": 100.00}'
 ```
